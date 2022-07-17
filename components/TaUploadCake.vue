@@ -14,11 +14,12 @@
             placeholder="Titulo"
             name="title"
           ></v-text-field>
-          <v-text-field
+          <v-select :items="items" label="Categoría" outlined></v-select>
+          <!-- <v-text-field
             outlined
             placeholder="Categoría"
             name="category"
-          ></v-text-field>
+          ></v-text-field> -->
           <v-textarea
             outlined
             placeholder="Descripción"
@@ -33,4 +34,10 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data: () => ({
+    items: ['Categoría 1', 'Categoría 2', 'Categoría 3', 'Categoría 4'],
+  }),
+}
+</script>

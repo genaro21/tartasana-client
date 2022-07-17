@@ -13,7 +13,7 @@
             <v-list-item-icon>
               <v-icon>mdi-file-image</v-icon>
             </v-list-item-icon>
-            <v-list-item-content>n# imagenes</v-list-item-content>
+            <v-list-item-content>n# tartas</v-list-item-content>
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
