@@ -2,7 +2,7 @@
   <div class="ta-comment-item">
     <v-row>
       <v-col cols="4">
-        <v-img :src="image"></v-img>
+        <v-img :src="image" @click="onClick()"></v-img>
       </v-col>
       <v-col cols="8">
         <p class="font-weight-black">{{ email }}</p>
@@ -26,6 +26,16 @@ export default {
     comment: {
       type: String,
       required: true,
+    },
+    cakeId: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    onClick() {
+      console.log('xxx onClick:', this.cakeId)
+      this.$router.push(`/details/${this.cakeId}`)
     },
   },
 }

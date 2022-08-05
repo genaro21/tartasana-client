@@ -37,7 +37,7 @@ export default {
   methods: {
     async onSubmit() {
       try {
-        if (this.email.length < 4 || this.password.length < 4) {
+        if (this.email.length < 4 || this.password.length < 2) {
           alert('Campos requeridos')
         }
         const body = JSON.stringify({
@@ -57,7 +57,14 @@ export default {
           alert(data.err)
           return
         }
-        console.log({ token: data.token })
+        console.log({ data })
+
+        localStorage.setItem('token', data.token)
+        localStorage.setItem('email', data.user.email)
+        localStorage.setItem('admin', data.user.admin)
+        localStorage.setItem('avatar', data.user.avatar)
+        localStorage.setItem('userId', data.user._id)
+
         this.$router.push('/home')
       } catch (err) {
         alert(err.message)

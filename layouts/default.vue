@@ -10,7 +10,7 @@
           <v-col cols="3">
             <TaPopular />
             <TaLastestComments />
-            <TaTradicional />
+            <!-- <TaTradicional /> -->
             <TaStats />
           </v-col>
         </v-row>

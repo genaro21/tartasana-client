@@ -8,9 +8,12 @@
               <v-img :src="comment.avatar"></v-img>
             </v-avatar>
           </v-col>
-          <v-col cols="8">
+          <v-col cols="6">
             <b>{{ comment.title }}</b>
             <p>{{ comment.comment }}</p>
+          </v-col>
+          <v-col cols="2">
+            <v-btn color="warning">Delete</v-btn>
           </v-col>
           <v-col cols="12" v-if="index != comments.length - 1">
             <v-divider></v-divider>
