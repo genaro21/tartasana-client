@@ -26,6 +26,7 @@ export default {
   data() {
     return {
       cakes: [],
+      token: undefined,
     }
   },
 
@@ -48,12 +49,19 @@ export default {
         console.log('cake: ', cake)
       } catch (err) {
         // AQUI DA UN ERROR Y NO SE CUAL
-        alert(err.message)
+        console.log(err.message)
       }
     },
     onClick(cakeId) {
-      console.log(cakeId)
-      this.$router.push(`/details/${cakeId}`)
+      this.token = localStorage.token
+
+      if (this.token) {
+        this.$router.push(`/details/${cakeId}`)
+      } else {
+        alert(
+          'Para poder acceder a fotos, comentarios, likes..., debes estar registrado'
+        )
+      }
     },
   },
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="ta-home">
     <TaLookingForCakes />
-    <TaLittlePresentation />
+    <!-- <TaLittlePresentation /> -->
     <TaRecentUploads />
   </div>
 </template>

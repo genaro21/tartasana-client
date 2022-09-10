@@ -1,41 +1,47 @@
 <template>
   <div class="ta-upload-cake">
     <TaCard title="Crear tarta" icon="mdi-cake-layered">
-      <div class="ta-upload-cake mt-10">
-        <v-file-input
-          prepend-icon=""
-          outlined
-          placeholder="Archivo imagen"
-          name="image"
-          v-model="image"
-          required
-        ></v-file-input>
-        <v-text-field
-          outlined
-          placeholder="Titulo"
-          name="title"
-          v-model="title"
-          required
-        ></v-text-field>
-        <v-select
-          :items="items"
-          label="Categoría"
-          outlined
-          v-model="category"
-          required
-        ></v-select>
+      <v-row>
+        <v-col cols="3"></v-col>
+        <v-col cols="6">
+          <div class="ta-upload-cake mt-10">
+            <v-file-input
+              prepend-icon=""
+              outlined
+              placeholder="Archivo imagen"
+              name="image"
+              v-model="image"
+              required
+            ></v-file-input>
+            <v-text-field
+              outlined
+              placeholder="Titulo"
+              name="title"
+              v-model="title"
+              required
+            ></v-text-field>
+            <v-select
+              :items="items"
+              label="Categoría"
+              outlined
+              v-model="category"
+              required
+            ></v-select>
 
-        <v-textarea
-          outlined
-          placeholder="Descripción"
-          name="description"
-          v-model="description"
-          required
-        ></v-textarea>
-        <div class="ta-btn-container d-flex justify-end mr-4">
-          <v-btn color="success" @click="submit">Enviar</v-btn>
-        </div>
-      </div>
+            <v-textarea
+              outlined
+              placeholder="Descripción"
+              name="description"
+              v-model="description"
+              required
+            ></v-textarea>
+            <div class="ta-btn-container d-flex justify-end mr-4">
+              <v-btn color="success" @click="submit">Enviar</v-btn>
+            </div>
+          </div>
+        </v-col>
+        <v-col cols="3"></v-col>
+      </v-row>
     </TaCard>
   </div>
 </template>

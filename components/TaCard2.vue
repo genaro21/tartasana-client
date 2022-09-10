@@ -1,20 +1,18 @@
 <template>
-  <div class="ta-card my-4">
-    <v-card class="totalCard">
+  <div class="ta-card my-4 mb-12">
+    <div class="totalCard">
       <v-card-title class="ta-card-title">
-        <v-icon size="32" style="color: white; margin-top: -20px">{{
+        <v-icon size="32" style="color: black; margin-top: -20px">{{
           icon
         }}</v-icon>
-        <p class="headline mx-2">{{ title }}</p>
-        <v-spacer></v-spacer>
-        <v-btn class="mt-n3">Delete</v-btn>
+        <p class="headline mx-2 font">{{ title }}</p>
       </v-card-title>
       <v-card-text class="ta-card-text">
         <div class="ta-card-text-container mt-2">
           <slot />
         </div>
       </v-card-text>
-    </v-card>
+    </div>
   </div>
 </template>
 
@@ -27,17 +25,24 @@ export default {
     icon: {
       type: String,
     },
+    admin: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
 
 <style scoped>
 .ta-card-title {
-  background-color: black;
-  color: white;
+  color: fuchsia;
   height: 70px;
+  background-color: rgba(200, 200, 200, 0.5);
 }
 .totalCard {
-  border: solid black 4px;
+  border: none;
+}
+.font {
+  font-family: 'Lobster', cursive !important;
 }
 </style>

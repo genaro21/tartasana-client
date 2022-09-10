@@ -2,7 +2,7 @@
   <div class="ta-details-id">
     <TaCakeDetails :cake="cake" />
     <TaComments />
-    <TaAllComments />
+    <TaAllComments :comments="comments" v-if="comments.length > 0" />
   </div>
 </template>
 

@@ -15,6 +15,7 @@
           </v-col>
         </v-row>
       </v-container>
+      <TaFooter />
     </v-app>
   </div>
 </template>

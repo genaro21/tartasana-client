@@ -12,6 +12,5 @@
 
 <style scoped>
 .ta-emptyCard {
-  border: solid black 4px;
 }
 </style>

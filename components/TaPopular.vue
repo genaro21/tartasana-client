@@ -48,7 +48,15 @@ export default {
     },
 
     onClick(cakeId) {
-      this.$router.push(`/details/${cakeId}`)
+      this.token = localStorage.token
+
+      if (this.token) {
+        this.$router.push(`/details/${cakeId}`)
+      } else {
+        alert(
+          'Para poder acceder a fotos, comentarios, likes..., debes estar registrado'
+        )
+      }
     },
   },
 }
